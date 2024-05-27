@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MainDelivery</string>
+    <string name="title_activity_trang_chu">TrangChu</string>
+    <string name="title_home">Danh sách đơn hàng</string>
+    <string name="title_dashboard">Map</string>
+    <string name="title_notifications">Đơn hàng đã giao</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
