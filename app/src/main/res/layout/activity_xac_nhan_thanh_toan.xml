@@ -9,7 +9,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thanh toán"
+        android:text="Xác nhận thanh toán"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,49 +26,51 @@
         app:layout_constraintTop_toBottomOf="@id/title" />
 
     <TextView
-        android:id="@+id/payment_method"
+        android:id="@+id/driver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chọn phương thức thanh toán"
+        android:text="Tài xế: "
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/total" />
 
-    <Button
-        android:id="@+id/credit_card"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/address_receive"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Credit Card"
+        android:text="Địa chỉ nhận: "
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/payment_method" />
+        app:layout_constraintTop_toBottomOf="@id/driver" />
 
-    <Button
-        android:id="@+id/cash"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/address_delivery"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tiền mặt"
+        android:text="Địa chỉ giao: "
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/credit_card" />
+        app:layout_constraintTop_toBottomOf="@id/address_receive" />
 
     <Button
         android:id="@+id/back"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Quay lại"
-        app:layout_constraintEnd_toStartOf="@id/next"
+        app:layout_constraintEnd_toStartOf="@id/confirm"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cash" />
+        app:layout_constraintTop_toBottomOf="@id/address_delivery" />
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/confirm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Tiếp theo"
+        android:text="Xác nhận"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/back"
-        app:layout_constraintTop_toBottomOf="@id/cash" />
+        app:layout_constraintTop_toBottomOf="@id/address_delivery" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
