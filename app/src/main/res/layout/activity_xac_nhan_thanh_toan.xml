@@ -19,9 +19,11 @@
         android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tổng tiền: "
+        android:layout_marginTop="32dp"
+        android:text="Phương thức thanh toán: "
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
 
@@ -39,9 +41,11 @@
         android:id="@+id/address_receive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="Địa chỉ nhận: "
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/driver" />
 
@@ -49,9 +53,11 @@
         android:id="@+id/address_delivery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
         android:text="Địa chỉ giao: "
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/address_receive" />
 
@@ -59,6 +65,7 @@
         android:id="@+id/back"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="328dp"
         android:text="Quay lại"
         app:layout_constraintEnd_toStartOf="@id/confirm"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +75,7 @@
         android:id="@+id/confirm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="328dp"
         android:text="Xác nhận"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/back"
