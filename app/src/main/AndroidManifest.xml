@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,11 +18,29 @@
         android:theme="@style/Theme.MainDelivery"
         tools:targetApi="31">
         <activity
-            android:name=".DangKy"
+            android:name=".DS_DonDaGiao"
+            android:exported="true" />
+        <activity
+            android:name=".TX_Map"
             android:exported="false" />
         <activity
-            android:name=".DangNhap"
+            android:name=".TX_HoanThanhNhanDon"
             android:exported="false" />
+        <activity
+            android:name=".TX_OrderList"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmedOrders"
+            android:exported="true" />
+        <activity
+            android:name=".MainTaiXe"
+            android:exported="false" />
+        <activity
+            android:name=".DangKy"
+            android:exported="true" />
+        <activity
+            android:name=".DangNhap"
+            android:exported="true" />
         <activity
             android:name=".DatHangThanhCong"
             android:exported="false" />
@@ -27,25 +50,25 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/title_activity_main">
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".ThanhToan"
+            android:exported="false" />
+        <activity
+            android:name=".ChonTaiXe"
+            android:exported="true" />
+        <activity
+            android:name=".FormDatHang"
+            android:exported="false" />
+        <activity
+            android:name=".FirstChoose"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ThanhToan"
-            android:exported="false" />
-        <activity
-            android:name=".ChonTaiXe"
-            android:exported="false" />
-        <activity
-            android:name=".FormDatHang"
-            android:exported="false" />
-        <activity
-            android:name=".FirstChoose"
-            android:exported="false" />
     </application>
 
 </manifest>

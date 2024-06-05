@@ -14,59 +14,57 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="Nhập đơn hàng ngay!"
-            android:textSize="24sp"
-            android:layout_gravity="center_horizontal" />
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/yourName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:hint="Tên của bạn"
-            android:layout_marginTop="16dp" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/receiverName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:hint="Tên người nhận"
-            android:layout_marginTop="16dp" />
+            android:minHeight="48dp" />
 
-        <EditText
-            android:id="@+id/driverName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tên tài xế"
-            android:layout_marginTop="16dp" />
 
         <EditText
             android:id="@+id/pickupAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:hint="Địa chỉ nhận hàng"
-            android:layout_marginTop="16dp" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/deliveryAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:hint="Địa chỉ giao hàng"
-            android:layout_marginTop="16dp" />
+            android:minHeight="48dp" />
 
         <LinearLayout
             android:id="@+id/buttonContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/orderButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nhập đơn hàng"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginEnd="16dp"
+                android:text="Nhập đơn hàng" />
 
             <Button
                 android:id="@+id/listButton"

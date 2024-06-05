@@ -35,32 +35,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/total" />
 
-    <Button
-        android:id="@+id/credit_card"
-        android:layout_width="0dp"
+    <RadioGroup
+        android:id="@+id/payment_method_group"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Credit Card"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/payment_method" />
+        app:layout_constraintTop_toBottomOf="@id/payment_method">
 
-    <Button
-        android:id="@+id/cash"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Tiền mặt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/credit_card" />
+        <RadioButton
+            android:id="@+id/credit_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit Card" />
 
-    <Button
-        android:id="@+id/back"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Quay lại"
-        app:layout_constraintEnd_toStartOf="@id/next"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cash" />
+        <RadioButton
+            android:id="@+id/cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiền mặt" />
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/next"
@@ -69,6 +64,15 @@
         android:text="Tiếp theo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/back"
-        app:layout_constraintTop_toBottomOf="@id/cash" />
+        app:layout_constraintTop_toBottomOf="@id/payment_method_group" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quay lại"
+        app:layout_constraintEnd_toStartOf="@id/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/payment_method_group" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

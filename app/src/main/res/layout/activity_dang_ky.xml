@@ -10,7 +10,7 @@
     tools:context=".DangKy">
 
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -23,33 +23,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:drawablePadding="10dp"
-        android:hint="Họ và tên"
+        android:hint="username"
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/user"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:drawablePadding="10dp"
-        android:hint="Tên đăng nhập"
+        android:hint="password"
         android:minHeight="48dp" />
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Xe máy" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Xe tải" />
-    </RadioGroup>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,7 +52,7 @@
             android:id="@+id/btnthoat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="THOÁT" />
+            android:text="Trở về đăng nhập" />
 
     </LinearLayout>
 
