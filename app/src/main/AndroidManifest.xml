@@ -18,22 +18,22 @@
         android:theme="@style/Theme.MainDelivery"
         tools:targetApi="31">
         <activity
-            android:name=".DS_DonDaGiao"
+            android:name=".order.DS_DonDaGiao"
             android:exported="true" />
         <activity
-            android:name=".TX_Map"
+            android:name=".driver.TX_Map"
             android:exported="false" />
         <activity
-            android:name=".TX_HoanThanhNhanDon"
+            android:name=".driver.TX_HoanThanhNhanDon"
             android:exported="false" />
         <activity
-            android:name=".TX_OrderList"
+            android:name=".driver.TX_OrderList"
             android:exported="false" />
         <activity
-            android:name=".ConfirmedOrders"
+            android:name=".order.ConfirmedOrders"
             android:exported="true" />
         <activity
-            android:name=".MainTaiXe"
+            android:name=".driver.MainTaiXe"
             android:exported="false" />
         <activity
             android:name=".DangKy"
@@ -42,20 +42,20 @@
             android:name=".DangNhap"
             android:exported="true" />
         <activity
-            android:name=".DatHangThanhCong"
+            android:name=".order.DatHangThanhCong"
             android:exported="false" />
         <activity
-            android:name=".XacNhanThanhToan"
+            android:name=".order.XacNhanThanhToan"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".order.MainOrder"
             android:exported="true"
             android:label="@string/title_activity_main" />
         <activity
-            android:name=".ThanhToan"
+            android:name=".order.ThanhToan"
             android:exported="false" />
         <activity
-            android:name=".ChonTaiXe"
+            android:name=".order.ChonTaiXe"
             android:exported="true" />
         <activity
             android:name=".FormDatHang"

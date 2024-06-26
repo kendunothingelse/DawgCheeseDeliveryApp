@@ -1,18 +1,19 @@
-package com.example.maindelivery;
+package com.example.maindelivery.order;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.example.maindelivery.FormDatHang;
+import com.example.maindelivery.R;
 import com.example.maindelivery.order.Order;
-import com.example.maindelivery.order.OrderAdapter;
+import com.example.maindelivery.order.adapter.OrderAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;

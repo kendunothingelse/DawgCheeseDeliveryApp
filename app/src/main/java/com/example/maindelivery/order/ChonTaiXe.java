@@ -1,4 +1,4 @@
-package com.example.maindelivery;
+package com.example.maindelivery.order;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +8,11 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.maindelivery.driver.DriverAdapter;
+import com.example.maindelivery.R;
+import com.example.maindelivery.driver.adapter.DriverAdapter;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
@@ -54,7 +52,7 @@ public class ChonTaiXe extends AppCompatActivity {
 
         Button backBtn = findViewById(R.id.back_button);
         backBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(ChonTaiXe.this, MainActivity.class);
+            Intent intent = new Intent(ChonTaiXe.this, MainOrder.class);
             startActivity(intent);
         });
 

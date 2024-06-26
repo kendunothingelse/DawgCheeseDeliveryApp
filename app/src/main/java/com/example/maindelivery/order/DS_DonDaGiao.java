@@ -1,4 +1,4 @@
-package com.example.maindelivery;
+package com.example.maindelivery.order;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.maindelivery.order.ConfirmedOrderAdapter;
-import com.example.maindelivery.order.ConfirmedOrderAttributes;
+import com.example.maindelivery.R;
+import com.example.maindelivery.order.adapter.ConfirmedOrderAdapter;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
@@ -55,7 +55,7 @@ public class DS_DonDaGiao extends AppCompatActivity {
 
         Button btnBack = findViewById(R.id.backButton);
         btnBack.setOnClickListener(v -> {
-            Intent intent = new Intent(DS_DonDaGiao.this, MainActivity.class);
+            Intent intent = new Intent(DS_DonDaGiao.this, MainOrder.class);
             startActivity(intent);
         });
     }

@@ -1,4 +1,4 @@
-package com.example.maindelivery;
+package com.example.maindelivery.driver;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,10 +7,8 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
+import com.example.maindelivery.R;
 import com.example.maindelivery.order.ConfirmedOrderAttributes;
 
 public class TX_HoanThanhNhanDon extends AppCompatActivity {

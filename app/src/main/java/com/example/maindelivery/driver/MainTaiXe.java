@@ -1,4 +1,4 @@
-package com.example.maindelivery;
+package com.example.maindelivery.driver;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.maindelivery.R;
 import com.example.maindelivery.order.ConfirmedOrderAttributes;
 
 public class MainTaiXe extends AppCompatActivity {

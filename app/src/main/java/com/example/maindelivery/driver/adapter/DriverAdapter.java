@@ -1,4 +1,4 @@
-package com.example.maindelivery.driver;
+package com.example.maindelivery.driver.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,9 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.maindelivery.ChonTaiXe;
+import com.example.maindelivery.order.ChonTaiXe;
 import com.example.maindelivery.R;
-import com.example.maindelivery.ThanhToan;
+import com.example.maindelivery.order.ThanhToan;
 
 import java.util.List;
 

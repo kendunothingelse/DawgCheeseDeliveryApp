@@ -1,20 +1,15 @@
-package com.example.maindelivery;
+package com.example.maindelivery.order;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.maindelivery.order.ConfirmedOrderAdapter;
-import com.example.maindelivery.order.ConfirmedOrderAttributes;
+import com.example.maindelivery.R;
+import com.example.maindelivery.order.adapter.ConfirmedOrderAdapter;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
@@ -40,7 +35,7 @@ public class ConfirmedOrders extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         back_to_main_button = findViewById(R.id.back_to_main_button);
         back_to_main_button.setOnClickListener(v -> {
-            Intent intent = new Intent(ConfirmedOrders.this, MainActivity.class);
+            Intent intent = new Intent(ConfirmedOrders.this, MainOrder.class);
             startActivity(intent);
         });
 

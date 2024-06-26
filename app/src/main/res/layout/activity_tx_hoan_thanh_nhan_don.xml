@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TX_HoanThanhNhanDon">
+    tools:context=".driver.TX_HoanThanhNhanDon">
 
     <!-- Thêm các TextView cho thông tin đơn hàng -->
 

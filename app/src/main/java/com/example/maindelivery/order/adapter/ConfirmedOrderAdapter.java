@@ -1,4 +1,4 @@
-package com.example.maindelivery.order;
+package com.example.maindelivery.order.adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -11,15 +11,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.maindelivery.R;
 import com.example.maindelivery.order.ConfirmedOrderAttributes;
+import com.example.maindelivery.order.adapter.listener.ConfirmedOrderClickListener;
 
 import java.util.List;
 
 public class ConfirmedOrderAdapter extends RecyclerView.Adapter<ConfirmedOrderAdapter.ConfirmedOrderViewHolder> {
     private List<ConfirmedOrderAttributes> orders;
     private int selectedPosition = -1; // Khởi tạo vị trí được chọn là -1, tức là không có thẻ nào được chọn
+    private ConfirmedOrderClickListener clickListener;
 
     public ConfirmedOrderAdapter(List<ConfirmedOrderAttributes> orders) {
         this.orders = orders;
+    }
+
+    public ConfirmedOrderAdapter(List<ConfirmedOrderAttributes> orders, ConfirmedOrderClickListener clickListener) {
+        this.orders = orders;
+        this.clickListener = clickListener;
     }
 
     @NonNull
@@ -39,27 +46,18 @@ public class ConfirmedOrderAdapter extends RecyclerView.Adapter<ConfirmedOrderAd
         holder.orderStatus.setText(order.getOrderStatus());
 
         holder.itemView.setOnClickListener(v -> {
-            notifyItemChanged(selectedPosition); // Cập nhật lại thẻ cũ
-            selectedPosition = position; // Cập nhật vị trí mới
-            notifyItemChanged(selectedPosition); // Cập nhật thẻ mới
+            notifyItemChanged(selectedPosition);
+            selectedPosition = position;
+            notifyItemChanged(selectedPosition);
+
+            clickListener.onItemClick(position, orders.get(position));//SRP
         });
 
-        // Thay đổi background của thẻ dựa vào vị trí được chọn
         if (position == selectedPosition) {
             holder.itemView.setBackgroundResource(R.drawable.card_border_selected);
         } else {
             holder.itemView.setBackgroundResource(R.drawable.card_border);
         }
-
-        holder.itemView.setOnClickListener(v -> {
-            notifyItemChanged(selectedPosition);
-            selectedPosition = position;
-            notifyItemChanged(selectedPosition);
-
-            if (listener != null) {
-                listener.onItemClick(orders.get(position));
-            }
-        });
     }
 
     @Override

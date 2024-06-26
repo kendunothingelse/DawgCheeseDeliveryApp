@@ -1,7 +1,5 @@
-package com.example.maindelivery.order;
+package com.example.maindelivery.order.adapter;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,16 +8,23 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
-
-import com.example.maindelivery.ChonTaiXe;
 import com.example.maindelivery.R;
+import com.example.maindelivery.order.Order;
+import com.example.maindelivery.order.adapter.listener.OrderClickListener;
+
+import java.util.List;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHolder> {
     private List<Order> orderList;
+    private OrderClickListener clickListener;
 
     public OrderAdapter(List<Order> orderList) {
         this.orderList = orderList;
+    }
+
+    public OrderAdapter(List<Order> orderList, OrderClickListener clickListener) {
+        this.orderList = orderList;
+        this.clickListener = clickListener;
     }
 
     @NonNull
@@ -34,11 +39,19 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         Order order = orderList.get(position);
         holder.yourName.setText(order.getYourName());
         holder.receiverName.setText(order.getReceiverName());
+
+        holder.itemView.setOnClickListener(v -> {
+            clickListener.onItemClick(position, orderList.get(position));
+        });
     }
 
     @Override
     public int getItemCount() {
         return orderList.size();
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(Order order);
     }
 
     public class OrderViewHolder extends RecyclerView.ViewHolder {
@@ -49,24 +62,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
             super(view);
             yourName = view.findViewById(R.id.yourName);
             receiverName = view.findViewById(R.id.receiverName);
-
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Context context = v.getContext();
-                    Intent intent = new Intent(context, ChonTaiXe.class);
-
-                    // Get the clicked order
-                    int position = getAdapterPosition();
-                    Order order = orderList.get(position);
-
-                    // Put addresses into Intent
-                    intent.putExtra("deliveryAddress", order.getDeliveryAddress());
-                    intent.putExtra("pickupAddress", order.getPickupAddress());
-
-                    context.startActivity(intent);
-                }
-            });
         }
     }
 }

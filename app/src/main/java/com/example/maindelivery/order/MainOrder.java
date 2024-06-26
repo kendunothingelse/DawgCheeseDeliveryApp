@@ -1,4 +1,4 @@
-package com.example.maindelivery;
+package com.example.maindelivery.order;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.maindelivery.R;
+
+public class MainOrder extends AppCompatActivity {
  private Button daXacNhan, danGiao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
         daXacNhan = (Button) findViewById(R.id.button_map);
         danGiao = (Button) findViewById(R.id.button_confirmed_orders);
         daXacNhan.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, ConfirmedOrders.class);
+            Intent intent = new Intent(MainOrder.this, ConfirmedOrders.class);
             startActivity(intent);
         });
         danGiao.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, DS_DonDaGiao.class);
+            Intent intent = new Intent(MainOrder.this, DS_DonDaGiao.class);
             startActivity(intent);
         });
     }

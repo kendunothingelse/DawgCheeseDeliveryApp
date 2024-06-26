@@ -1,4 +1,4 @@
-package com.example.maindelivery;
+package com.example.maindelivery.order;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,9 +6,8 @@ import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.example.maindelivery.R;
 
 public class DatHangThanhCong extends AppCompatActivity {
     Button back_to_home, view_order;
@@ -20,7 +19,7 @@ public class DatHangThanhCong extends AppCompatActivity {
         back_to_home = findViewById(R.id.back_to_home);
         view_order = findViewById(R.id.view_orders);
         back_to_home.setOnClickListener(v -> {
-            Intent intent = new Intent(DatHangThanhCong.this, MainActivity.class);
+            Intent intent = new Intent(DatHangThanhCong.this, MainOrder.class);
             startActivity(intent);
         });
         view_order.setOnClickListener(v -> {

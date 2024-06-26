@@ -1,4 +1,4 @@
-package com.example.maindelivery;
+package com.example.maindelivery.driver;
 
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
@@ -13,12 +13,15 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.maindelivery.order.DS_DonDaGiao;
+import com.example.maindelivery.R;
 import com.example.maindelivery.order.ConfirmedOrderAttributes;
 import com.google.firebase.firestore.FirebaseFirestore;
-
+import com.example.maindelivery.driver.MapDataHandler;
 public class TX_Map extends AppCompatActivity {
     String username;
     private FirebaseFirestore db;
+    private MapDataHandler mapDataHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

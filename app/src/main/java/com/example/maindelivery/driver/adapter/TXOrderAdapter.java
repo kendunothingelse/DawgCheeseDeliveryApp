@@ -1,4 +1,4 @@
-package com.example.maindelivery.driver;
+package com.example.maindelivery.driver.adapter;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,8 +7,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.maindelivery.ConfirmedOrders;
-import com.example.maindelivery.R;
 import com.example.maindelivery.order.ConfirmedOrderAttributes;
 
 public class TXOrderAdapter extends  RecyclerView.Adapter<TXOrderAdapter.OrderViewHolder>{
